@@ -8,6 +8,8 @@ package cdp;
 
 import cgd.Dao;
 import cgd.DaoPedido;
+import cgd.Servidor;
+import cgd.ServidorFTP;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -47,6 +49,7 @@ public class CodServidor extends HttpServlet {
         //servidor.recebe("teste.json");
         //persistencia.salvar(new Pedido(descricao, marca, Integer.parseInt(quantidade.trim()), Integer.parseInt(codigo)), "teste.json");
         //servidor.enviar("teste.json");
+        //persistencia.deletar();
         Dao dao = new DaoPedido();
         dao.set(p);
         dao.inserir();

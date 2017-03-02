@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Cadastro De Pedidos</title>
+        <title>Noticias</title>
 
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,12 +19,26 @@
     </head>
     <body>
         <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="nav nav-pills" role="tablist">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--<a class="navbar-brand"  href="http://localhost:8080/ProjetoWebService/">Principal <span class="sr-only">(current)</span></a>-->
+                    <li role="presentation" class="active"><a href="http://localhost:8080/ProjetoWebService/">Principal</a></li>
+                    <li role="presentation"><a href="http://localhost:8080/ProjetoWebService/pedido.html">Cadastro De Pedido</a></li>
+                </div>
 
+            </div><!-- /.container-fluid -->
         </nav>
         <div class="jumbotron">
             <h1>
                 <center>
-                    Cadastro De Pedidos
+                    Sistema De Pedidos
                 </center> 
             </h1>
             <p></p>
@@ -32,69 +46,12 @@
         </div>
         <br>
 
-        <form method="post" action="CodServidor">
-            <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1" >Codigo</span>
-                <input id="codigo" type="text" class="form-control" name="codigo"  placeholder="1" required="required" aria-describedby="basic-addon1">
-            </div>
-            <br> 
-            <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1" >Descrição</span>
-                <input id="descricao" type="text" class="form-control" name="descricao"  placeholder="Feijao" required="required" aria-describedby="basic-addon1">
-            </div>
-            <br>
-            <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1">Marca</span>
-                <input id="marca" type="text" class="form-control" name="marca"  placeholder="Rio doce" required="required" aria-describedby="basic-addon1">
-            </div>
-            <br>
-            <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1">Quantidade</span>
-                <input id="quantidade" type="text" class="form-control" name="quantidade"  placeholder="0" required="required" aria-describedby="basic-addon1">
-            </div>
-            <br>
-            <br>
-
-            <script>
-                function showAlert() {
-                    if ($("#myAlert").find("div#myAlert2").length === 0) {
-                        $("#myAlert").append("<div class='alert alert-success alert-dismissable' id='myAlert2'> <button type='button' class='close' data-dismiss='alert'  aria-hidden='true'>&times;</button> Pedido Cadastrado Com Sucesso!!!</div>");
-                    }
-                    $("#myAlert").css("display", "");
-                }
-                function verifica() {
-
-                    var x1 = document.getElementById("codigo").value !== "";
-                    var x2 = document.getElementById("descricao").value !== "";
-                    var x3 = document.getElementById("marca").value !== "";
-                    var x4 = document.getElementById("quantidade").value !== "";
-                    var result = x1 && x2 && x3 && x4;
-                    if (result) {
-                        showAlert();
-                    }
-                }
-            </script>
-            <button type="submit" class="btn btn-default" onclick="verifica()">Cadastrar</button>
- 
-            
-            <div class="container" style="display:none;" id="myAlert">
-  
-                <div class="alert alert-success alert-dismissable" id="myAlert2">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <br>
-                    <br>
-                    Pedido Cadastrado Com sucesso!!!
-                </div>
-            </div>
-
-            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-            <!-- Include all compiled plugins (below), or include individual files as needed -->
-            <script src="js/bootstrap.min.js"></script>
-
-
-        </form>
+        
         <br>
         <br>
+        
+        <b>Este site foi desenvolvido na forma de uma avaliação onde o objetivo é 
+        estudar, conceituadamente, a forma como as aplicações se comunicam, seja essa comunicação
+        por meio de linguagens de marcação como xml ou json.</b>
     </body>
 </html>
